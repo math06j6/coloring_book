@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coloring Book</title>
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code:400,700&display=swap" rel="stylesheet">  
+  </head>
+  <body>
+    <header class="header">
+      <h1>Coloring Book</h1>
+      <h2>12C.01.02</h2>
+    </header>
+    <main>
+      <section class="wrapper">
+        <div class="container"></div>
+        <div class="palette">
+          <div class="picked"></div>
+          <fieldset role="radiogroup" id="color" class="color-switcher">
+            <legend></legend>
+            <div class="colors">
+              <div class="input-container">
+                <input type="radio" name="color" id="one" value="one" checked />
+                <label for="one" data-color="one"></label>
+              </div>
+              <div class="input-container">
+                <input type="radio" name="color" id="two" value="two" />
+                <label for="two" data-color="two"></label>
+              </div>
+              <div class="input-container">
+                <input type="radio" name="color" id="three" value="three" />
+                <label for="three" data-color="three"><span class="sr-only"></span></label>
+              </div>
+              <div class="input-container">
+                <input type="radio" name="color" id="four" value="four" />
+                <label for="four" data-color="four"></label>
+              </div>
+              <div class="input-container">
+                <input type="radio" name="color" id="five" value="five" />
+                <label for="five" data-color="five"></label>
+              </div>
+              <div class="input-container">
+                <input type="radio" name="color" id="six" value="six" />
+                <label for="six" data-color="six"></label>
+              </div>
+              <div class="input-container">
+                <input type="radio" name="color" id="seven" value="seven" />
+                <label for="seven" data-color="seven"></span></label>
+              </div>
+              <div class="input-container">
+                <input type="radio" name="color" id="eight" value="eight" />
+                <label for="eight" data-color="eight"></label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,227 @@
+:root {
+  --backgroundColor: white;
+  --baseColor: #202020;
+  --txtTwo: #6e6e6e;
+
+  --colorOne: white;
+  --colorTwo: yellow;
+  --colorThree: #9059ff;
+  --colorFour: chocolate;
+  --colorFive: orange;
+  --colorSix: green;
+  --colorSeven: blue;
+  --colorEight: red;
+}
+
+[data-color="one"] {
+  --selectedColor: white;
+}
+
+[data-color="two"] {
+  --selectedColor: yellow;
+}
+
+[data-color="three"] {
+  --selectedColor: #9059ff;
+}
+
+[data-color="four"] {
+  --selectedColor: chocolate;
+}
+
+[data-color="five"] {
+  --selectedColor: orange;
+}
+
+[data-color="six"] {
+  --selectedColor: green;
+}
+[data-color="seven"] {
+  --selectedColor: blue;
+}
+
+[data-color="eight"] {
+  --selectedColor: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  background: var(--backgroundColor);
+  color: var(--baseColor);
+  font-family: "Fira Code", monospace;
+}
+
+section {
+  width: 100%;
+  padding: 0;
+  /* max-width: 1600px; */
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  height: 100%;
+  color: var(--baseColor);
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0 0 0.5rem;
+  font-weight: 400;
+  color: var(--txtTwo);
+}
+
+h1,
+h2 {
+  margin: 0 0 0.5rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 3;
+  flex-basis: 400px;
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 400px;
+  padding: 2rem;
+}
+
+svg {
+  max-height: 50vh;
+  max-width: 800px;
+}
+
+/***** Palette *****/
+
+.color-switcher .input-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.color-switcher label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1.5px solid black;
+  cursor: pointer;
+}
+.color-switcher label[data-color="one"] {
+  background-color: var(--colorOne);
+  --selectedColor: var(--colorOne);
+}
+
+.color-switcher label[data-color="two"] {
+  background-color: var(--colorTwo);
+}
+
+.color-switcher label[data-color="three"] {
+  background-color: var(--colorThree);
+}
+
+.color-switcher label[data-color="four"] {
+  background-color: var(--colorFour);
+}
+
+.color-switcher label[data-color="five"] {
+  background-color: var(--colorFive);
+}
+
+.color-switcher label[data-color="six"] {
+  background-color: var(--colorSix);
+}
+
+.color-switcher label[data-color="seven"] {
+  background-color: var(--colorSeven);
+}
+
+.color-switcher label[data-color="eight"] {
+  background-color: var(--colorEight);
+}
+
+.color-switcher input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+.color-switcher input:checked + label {
+  border: 5px solid lime;
+  transform: scale(1.25);
+}
+
+.color-switcher input:focus + label {
+  transform: scale(1.25);
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.picked {
+  width: 100px;
+  height: 100px;
+  border: 1.5px solid black;
+  margin: 2rem;
+  border-radius: 50%;
+  background: var(--selectedColor);
+}
+
+.color {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: 2px solid black;
+  cursor: pointer;
+  border-radius: 50%;
+  cursor: crosshair;
+}
+
+path {
+  cursor: crosshair;
+}
